@@ -37,9 +37,9 @@ function findMostRecentBook(books) {
     // 🪲 Bug: Logic error
     return books.reduce((mostRecent, book) => new Date(book.published) > new Date(mostRecent.published) ? book : mostRecent);
 }
-
+// Function to find the intersection (common concepts) between two sets
 function findIntersection(setA, setB) {
-    // 🪲 Bug: Incorrect logic
+    // Corrected logic- Calculate the intersection by filtering setA to include only elements also in setB
     const intersection = new Set([...setA].filter(concept => setB.has(concept)));
     return intersection;
 }
