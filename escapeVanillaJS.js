@@ -43,7 +43,7 @@ function findIntersection(setA, setB) {
     const intersection = new Set([...setA].filter(concept => setB.has(concept)));
     return intersection;
 }
-
+//Function to navigate the labyrinth based on provided direction
 async function navigateLabyrinth(directions) {
     for (let direction of directions) {
         // 🪲 Bug: No delay
