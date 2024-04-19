@@ -45,8 +45,8 @@ function findIntersection(setA, setB) {
 }
 //Function to navigate the labyrinth based on provided direction
 async function navigateLabyrinth(directions) {
+    // Corrected logic: Added asynchronous delay between each navigation step for a smooth experience
     for (let direction of directions) {
-        // 🪲 Bug: No delay
         await new Promise(resolve => setTimeout(resolve, 1000)); //1-second delay between each step
         console.log(`Navigating: ${direction.step}`);
     }
