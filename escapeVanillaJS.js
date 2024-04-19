@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     });
 });
-
+// Function to find the most recent book based on publication date
 function findMostRecentBook(books) {
     // Corrected logic- Compare the publication date of each book and return the most recent one
     return books.reduce((mostRecent, book) => new Date(book.published) > new Date(mostRecent.published) ? book : mostRecent);
